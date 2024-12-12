@@ -1,0 +1,27 @@
+TC-TRAFFIC CONTROL UTILITY
+
+for showing the rules
+	sudo tc qdisc show dev lo
+
+for deleting the rules
+	sudo tc qdisc del dev lo root
+
+for adding bandwidth
+
+	sudo tc qdisc add dev eth0 root tbf rate 1mbit burst 32kbit latency 400ms
+
+for adding packetloss , delay ,jitter
+	sudo tc qdisc change dev lo root netem loss 10% delay 100ms 10ms
+
+---------------------------------------------------------------------------
+
+to check the bandwidth ---> eg:limiting bw to 2mb
+	iperf3 -c localhost -u -b 2MB 
+ 
+to check the jitter and delay
+	ping localhost
+	or
+	iperf3 -c localhost -u(just run in udp mode)
+
+--------------------------------------------------------------------------
+

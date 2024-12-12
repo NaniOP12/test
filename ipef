@@ -1,0 +1,24 @@
+iperf3 look manual nigga
+-------------------------------------------
+for starting server
+	iperf3 -s
+-------------------------------------------
+client:
+
+for limitting time use
+	iperf3 -c localhost -t 5
+
+for udp use
+	iperf3 -c localhost -u
+	
+for modifying bandwidth use
+	iperf3 -c localhost -b 10m
+
+for parallel sterams
+	iperf -c localhost -P 2
+
+for reverse mode
+	iperf -c localhost -R
+
+for bidirectional mode
+	iperf -c localhost -d
