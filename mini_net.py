@@ -1,5 +1,4 @@
 from mininet.topo import Topo
-
 class Mesh(Topo):
 	def build(self,n=4):
 		switches = []
@@ -18,3 +17,5 @@ class Mesh(Topo):
 			for j in range(i+1,n):
 				self.addLink(hosts[i],hosts[j])
 topos = {'mesh':Mesh}
+
+#sudo mn --custom mini_net.py --top mesh --controller none
